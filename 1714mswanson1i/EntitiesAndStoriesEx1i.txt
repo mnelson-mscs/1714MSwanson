@@ -1,0 +1,25 @@
+User Stories
+---
+**As a streamer I want to create viewable clips so that I can share highlights
+**As a viewer, I want to follow certain streamers so that I can know when they go live
+**As a streamer, I want viewers to be able to sub to me(to get certain benefits)
+**As a streamer, I want to give certain people more permissions(mod) in my chat
+**As a viewer, I want to view vods of past streams 
+
+
+
+
+
+Entities "Worksheet"
+---
+Users(UserId, Username, Password, FirstName, Lastname, Email, Phone, ModId)
+
+Following(FollowId, UserId, Following_UserId, FollowingSince)
+
+Subscriptions(SubId, UserId, SubbedTo_UsedId, SubbedSince)
+
+Mods(ModId, UserId, ModFor_UserId, DateModded)
+
+Vods(VodId, CreationDate, TotalViews, SubOnly, UserId, VodLength)
+
+Clips(ClipId, VodId, CreationDate, TotalViews, Length)
