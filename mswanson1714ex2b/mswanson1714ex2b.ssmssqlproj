@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="1714mswanson2a">
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="mswanson1714ex2b">
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
         <ConnectionNode Name="(local):DESKTOP-AJ1PE2A\Malachi">
-          <Created>2019-09-30T17:05:16.4894885-05:00</Created>
+          <Created>2019-10-07T15:05:21.6568323-05:00</Created>
           <Type>SQL</Type>
           <Server>(local)</Server>
           <UserName />
@@ -29,65 +29,59 @@
     </LogicalFolder>
     <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
       <Items>
-        <FileNode Name="1714mswanson2aDatabaseDiagram.png">
+        <FileNode Name="2b1.png">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>1714mswanson2aDatabaseDiagram.png</FullPath>
+          <FullPath>2b1.png</FullPath>
         </FileNode>
-        <FileNode Name="2a.1.png">
+        <FileNode Name="2b2.png">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>2a.1.png</FullPath>
+          <FullPath>2b2.png</FullPath>
         </FileNode>
-        <FileNode Name="2a2.png">
+        <FileNode Name="2b3.png">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>2a2.png</FullPath>
+          <FullPath>2b3.png</FullPath>
         </FileNode>
-        <FileNode Name="2a3.png">
+        <FileNode Name="2b4.png">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>2a3.png</FullPath>
+          <FullPath>2b4.png</FullPath>
         </FileNode>
-        <FileNode Name="2a4.png">
+        <FileNode Name="2b5.png">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>2a4.png</FullPath>
+          <FullPath>2b5.png</FullPath>
         </FileNode>
-        <FileNode Name="2a5.png">
+        <FileNode Name="2b6.png">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>2a5.png</FullPath>
+          <FullPath>2b6.png</FullPath>
         </FileNode>
-        <FileNode Name="2a6.png">
+        <FileNode Name="2b7.png">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>2a6.png</FullPath>
+          <FullPath>2b7.png</FullPath>
         </FileNode>
-        <FileNode Name="2a7.png">
+        <FileNode Name="2b8.png">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>2a7.png</FullPath>
+          <FullPath>2b8.png</FullPath>
         </FileNode>
-        <FileNode Name="2a8.png">
+        <FileNode Name="2b9.png">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>2a8.png</FullPath>
-        </FileNode>
-        <FileNode Name="2a9.png">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
-          <FullPath>2a9.png</FullPath>
+          <FullPath>2b9.png</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
