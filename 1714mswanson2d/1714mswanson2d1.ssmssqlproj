@@ -1,0 +1,58 @@
+-- 2D.1 Buildings, Aparments, Admins
+SELECT        Building.BuildingId, Building.BuildingName, Building.City, Apartment.ApartmentNum, Person.FirstName, Person.LastName
+FROM            Apartment INNER JOIN
+                         Building ON Apartment.BuildingId = Building.BuildingId INNER JOIN
+                         Person ON Apartment.AdminId = Person.PersonId
+ORDER BY Building.City, Building.BuildingName, Apartment.ApartmentNum, Person.FirstName, Person.LastName
+
+-- 2D.2 Buildings, Apartments, Tenants
+SELECT        Person.PersonId, Person.LastName, Person.FirstName, Building.City, Apartment.BuildingId, Building.BuildingName, Apartment.ApartmentNum
+FROM            Apartment INNER JOIN
+                         Building ON Apartment.BuildingId = Building.BuildingId INNER JOIN
+                         Person ON Apartment.TenantId = Person.PersonId
+ORDER BY Person.LastName, Person.FirstName, Apartment.BuildingId
+
+-- 2D.3 Apartment, Tenant, Invoice, Line Item
+SELECT        Apartment.ApartmentNum, Person.LastName, Person.FirstName, Invoice.InvoiceId, Invoice.InvoiceDate, LineItem.Description, LineItem.Amount
+FROM            Apartment INNER JOIN
+                         Invoice ON Apartment.ApartmentId = Invoice.ApartmentId INNER JOIN
+                         LineItem ON Invoice.InvoiceId = LineItem.InvoiceId INNER JOIN
+                         Person ON Apartment.TenantId = Person.PersonId
+WHERE        (Apartment.BuildingId = 1)
+ORDER BY Apartment.ApartmentNum, Person.FirstName, Person.LastName, Invoice.InvoiceDate
+
+-- 2D.4 Apartment, Tenant, Invoice total
+SELECT        Apartment.BuildingId, Apartment.ApartmentId, Person.LastName, Person.FirstName, Invoice.InvoiceId, Invoice.InvoiceDate, SUM(LineItem.Amount) AS [Invoice Total]
+FROM            Apartment INNER JOIN
+                         Invoice ON Apartment.ApartmentId = Invoice.ApartmentId INNER JOIN
+                         Person ON Apartment.TenantId = Person.PersonId INNER JOIN
+                         LineItem ON Invoice.InvoiceId = LineItem.InvoiceId
+GROUP BY Apartment.BuildingId, Apartment.ApartmentId, Person.LastName, Person.FirstName, Invoice.InvoiceId, Invoice.InvoiceDate
+
+-- 2D.5 Invoice, Tenant, Receipt
+SELECT        Invoice.InvoiceId, Invoice.InvoiceDate, Apartment.BuildingId, Apartment.ApartmentNum, Person.LastName, Person.FirstName, Receipt.ReceiptDate, Receipt.Amount
+FROM            Apartment INNER JOIN
+                         Invoice ON Apartment.ApartmentId = Invoice.ApartmentId INNER JOIN
+                         Person ON Apartment.TenantId = Person.PersonId INNER JOIN
+                         Receipt ON Invoice.InvoiceId = Receipt.InvoiceId
+ORDER BY Invoice.InvoiceDate, Receipt.ReceiptDate
+
+-- 2D.6 Invoice, Tenant, Apartment, Billed, Received
+SELECT        Invoice.InvoiceId, Invoice.InvoiceDate, Person.LastName, Apartment.BuildingId, Apartment.ApartmentNum, SUM(LineItem.Amount) AS Billed, Receipt.Amount AS Received
+FROM            Apartment INNER JOIN
+                         Building ON Apartment.BuildingId = Building.BuildingId INNER JOIN
+                         Invoice ON Apartment.ApartmentId = Invoice.ApartmentId INNER JOIN
+                         LineItem ON Invoice.InvoiceId = LineItem.InvoiceId INNER JOIN
+                         Person ON Apartment.TenantId = Person.PersonId INNER JOIN
+                         Receipt ON Invoice.InvoiceId = Receipt.InvoiceId
+GROUP BY Invoice.InvoiceId, Invoice.InvoiceDate, Person.LastName, Apartment.BuildingId, Apartment.ApartmentNum, Receipt.Amount
+
+-- 2D.7 Admin, Invoice, Total, Billed, Received
+SELECT        Person.PersonId, Person.LastName AS Admin, Invoice.InvoiceId, Invoice.InvoiceDate, SUM(LineItem.Amount) AS Billed, Receipt.Amount AS Received
+FROM            Apartment INNER JOIN
+                         Invoice ON Apartment.ApartmentId = Invoice.ApartmentId INNER JOIN
+                         LineItem ON Invoice.InvoiceId = LineItem.InvoiceId INNER JOIN
+                         Person ON Apartment.AdminId = Person.PersonId INNER JOIN
+                         Receipt ON Invoice.InvoiceId = Receipt.InvoiceId
+GROUP BY Person.PersonId, Person.LastName, Invoice.InvoiceId, Invoice.InvoiceDate, Receipt.Amount
+ORDER BY Received
