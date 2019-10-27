@@ -63,7 +63,7 @@ FROM            Apartment INNER JOIN
 GROUP BY Apartment.BuildingId, Apartment.ApartmentNum, Person.FirstName + N' ' + Person.LastName, Invoice.DueDate, Receipt.ReceiptDate, DATEDIFF(day, Invoice.DueDate, Receipt.ReceiptDate)
 HAVING        (DATEDIFF(day, Invoice.DueDate, Receipt.ReceiptDate) > 0)
 
--- 2e.8
+-- 2e.8(I don't even know what to change about this)
 SELECT        Person.PersonId, Person.FirstName + N' ' + Person.LastName AS Tenant, MAX(Invoice.InvoiceDate) AS [Recent Invoice], DATEADD(month, 1, Invoice.InvoiceDate) AS [Next Invoice]
 FROM            Apartment INNER JOIN
                          Building ON Apartment.BuildingId = Building.BuildingId INNER JOIN
