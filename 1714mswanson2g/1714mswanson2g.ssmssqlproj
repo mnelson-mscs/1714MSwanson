@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="1714mswanson2g">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="DESKTOP-AJ1PE2A:DESKTOP-AJ1PE2A\Malachi">
+          <Created>2019-11-05T22:48:09.9598707-06:00</Created>
+          <Type>SQL</Type>
+          <Server>DESKTOP-AJ1PE2A</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>PropertyManager2</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="1714mswanson2g.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-AJ1PE2A:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-AJ1PE2A</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>1714mswanson2g.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items>
+        <FileNode Name="2g1.png">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>2g1.png</FullPath>
+        </FileNode>
+        <FileNode Name="2g2.png">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>2g2.png</FullPath>
+        </FileNode>
+        <FileNode Name="2g3.png">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>2g3.png</FullPath>
+        </FileNode>
+        <FileNode Name="2gModel.png">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>2gModel.png</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
